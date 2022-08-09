@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <title>Liên Hệ</title>
+        </h:head>
+        <h:body>
+            <ui:composition template="Template/template.xhtml">
+                <ui:define name="content">
+
+                    <script>link_active = 5;</script>
+
+                    <div class="c80">
+                        <h3 style=" color: #444; margin:70px 0px 20px 0px;text-align: center;font-weight: 550;">Liên hệ với chúng tôi qua</h3>
+                    </div>
+                    <div style="margin-left:300px;padding: 50px 0;">
+                        <div style="width:950px;height: 70px; text-align: center;display:flex;justify-content: space-around">
+                            <div style="width: 300px;">
+                                <a href="https://www.facebook.com/messages/t/100026072020465">
+                                    <img style="width :60px;height:60px;" src="Content/Images/mess.png" alt="Facebook"/>
+                                    <h5>Messenger</h5></a>
+
+                            </div>
+                            <div style="width: 300px;">
+                                <img  style="width :60px;height:60px;" src="Content/Images/call.png" alt="alt"/>
+                                <a ><h5>0346 640 039</h5></a>
+                            </div>
+                            <div style="width: 300px;">
+                                <img  style="width :60px;height:60px;" src="Content/Images/gmail.png" alt="alt"/>
+                                <a href="mailto:huonggiang.hvact@gmail.com"><h5>huonggiang.hvact@gmail.com</h5></a>
+                            </div> 
+                        </div>
+                    </div>
+                </ui:define>
+            </ui:composition>
+        </h:body>
+    </f:view>
+</html>
+
