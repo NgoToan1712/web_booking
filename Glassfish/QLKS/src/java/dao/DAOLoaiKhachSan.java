@@ -18,7 +18,7 @@ public class DAOLoaiKhachSan {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select L.Id as A, L.Ten as B, L.MoTa as C, "
                     + "L.UrlHinhAnh as D, count(L.Id) as E from LoaiKhachSan L left join KhachSan K "
-                    + "on L.Id = K.IdLoaiKhachSan group by L.Id, L.Ten, L.MoTa, L.UrlHinhAnh");
+                    + "on L.Id = K.IdLoaiKhachSan group by L.Id, L.Ten, L.MoTa, L.UrlHinhAnh ");
             while (rs.next()) {
                 LoaiKhachSan tmp = new LoaiKhachSan();
                 tmp.setId(rs.getInt("A"));

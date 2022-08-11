@@ -22,11 +22,12 @@ public class LsDatPhong implements Serializable {
     String ngayTra;
     String thanhTien;
     String trangThai;
+    String soDienThoai;
 
     public LsDatPhong() {
     }
 
-    public LsDatPhong(String tenThanhPho, String tenKhachSan, String tenPhong, String tenTaiKhoan, String ngayDat, String ngayDen, String ngayTra, String thanhTien, String trangThai) {
+    public LsDatPhong(String tenThanhPho, String tenKhachSan, String tenPhong, String tenTaiKhoan, String ngayDat, String ngayDen, String ngayTra, String thanhTien, String trangThai,String soDienThoai) {
         this.tenThanhPho = tenThanhPho;
         this.tenKhachSan = tenKhachSan;
         this.tenPhong = tenPhong;
@@ -36,6 +37,7 @@ public class LsDatPhong implements Serializable {
         this.ngayTra = ngayTra;
         this.thanhTien = thanhTien;
         this.trangThai = trangThai;
+        this.soDienThoai=soDienThoai;
     }
 
     public LsDatPhong(LsDatPhong dp) {
@@ -48,6 +50,7 @@ public class LsDatPhong implements Serializable {
         this.ngayTra = dp.ngayTra;
         this.thanhTien = dp.thanhTien;
         this.trangThai = dp.trangThai;
+        this.soDienThoai=dp.soDienThoai;
     }
 
     public String getTenThanhPho() {
@@ -120,6 +123,14 @@ public class LsDatPhong implements Serializable {
 
     public void setTrangThai(String trangThai) {
         this.trangThai = trangThai;
+    }
+
+    public String getSoDienThoai() {
+        return soDienThoai;
+    }
+
+    public void setSoDienThoai(String soDienThoai) {
+        this.soDienThoai = soDienThoai;
     }
 
 }

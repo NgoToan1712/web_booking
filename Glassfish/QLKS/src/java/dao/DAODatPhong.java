@@ -47,14 +47,14 @@ public class DAODatPhong {
         try {
             con = SQLConnection.getConnection();
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("select ThanhPho.Ten as thanhpho,KhachSan.Ten as khachsan,Phong.Ten as phong,TaiKhoan,NgayDat,NgayDen,NgayTra,ThanhTien,DaHuy from ((DatPhong join Phong on DatPhong.IdPhong=Phong.Id) join KhachSan on Phong.IdKhachSan=KhachSan.Id) join ThanhPho on KhachSan.IdThanhPho=ThanhPho.Id");
+            ResultSet rs = stmt.executeQuery("select ThanhPho.Ten as thanhpho,KhachSan.Ten as khachsan,Phong.Ten as phong,TaiKhoan,NgayDat,NgayDen,NgayTra,ThanhTien,DaHuy,TaiKhoan.SoDienThoai from (((DatPhong join Phong on DatPhong.IdPhong=Phong.Id) join KhachSan on Phong.IdKhachSan=KhachSan.Id) join ThanhPho on KhachSan.IdThanhPho=ThanhPho.Id) join TaiKhoan on DatPhong.TaiKhoan=TaiKhoan.TenTaiKhoan");
             while (rs.next()) {
                 LsDatPhong tmp = new LsDatPhong();
                 tmp.setTenThanhPho(rs.getString("thanhpho"));
                 tmp.setTenKhachSan(rs.getString("khachsan"));
                 tmp.setTenPhong(rs.getString("phong"));
                 tmp.setTenTaiKhoan(rs.getString("TaiKhoan"));
-                DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+                DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
                 String NgayDat = formatter.format(rs.getDate("NgayDat"));
                 tmp.setNgayDat(NgayDat);
                 String NgayDen = formatter.format(rs.getDate("NgayDen"));
@@ -68,9 +68,18 @@ public class DAODatPhong {
                 if (check == true) {
                     trangthai = "Đã hủy";
                 } else {
-                    trangthai="Đã đặt";
+                    long millis = System.currentTimeMillis();
+                    Date ngayHienTai = new Date(millis);
+                    Date ngTra = rs.getDate("NgayTra");
+                    if (ngTra.compareTo(ngayHienTai) < 0) {
+                        trangthai = "Hoàn tất";
+                    } else {
+                        trangthai = "Đang đặt";
+                    }
+          
                 }
                 tmp.setTrangThai(trangthai);
+                tmp.setSoDienThoai(rs.getString("SoDienThoai"));
                 list.add(tmp);
             }
             con.close();

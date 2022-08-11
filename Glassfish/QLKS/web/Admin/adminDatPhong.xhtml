@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <title>Lịch sử đặt phòng</title>
+        </h:head>
+        <h:body>
+            <ui:composition template="AdminTemplate/adminTemplate.xhtml">
+                <ui:define name="content">
+                    <p:growl id="msg" showDetail="true"/>
+                    <h:form id="form">
+                        <p:dataTable id="danh_sach" var="item" value="#{beanDatPhong.list}"
+                                     paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
+                                     paginator="true" rows="9" style="margin-bottom:20px" paginatorPosition="top">
+                            <p:column headerText="Tài khoản" style="width:45%">
+                                <h:outputText value="#{item.tenTaiKhoan}"/>
+                            </p:column>
+                             <p:column headerText="Số điện thoại" style="width:35%">
+                                 <h:outputText value="#{item.soDienThoai}"/>
+                            </p:column>
+                            <p:column headerText="Ngày đặt" style="width:35%">
+                                <h:outputText value="#{item.ngayDat}"/>
+                            </p:column>
+                            <p:column headerText="Ngày đến" style="width:35%">
+                                <h:outputText value="#{item.ngayDen}"/>
+                            </p:column>
+                            <p:column headerText="Ngày trả" style="width:35%">
+                                <h:outputText value="#{item.ngayTra}"/>
+                            </p:column>
+                            <p:column headerText="Thành phố" style="width:60%">
+                                <h:outputText value="#{item.tenThanhPho}"/>
+                            </p:column>
+                            <p:column headerText="Khách sạn" style="width:60%">
+                                <h:outputText value="#{item.tenKhachSan}"/>
+                            </p:column>
+                            <p:column headerText="Phòng" style="width:60%">
+                                <h:outputText value="#{item.tenPhong}"/>
+                            </p:column>
+                            <p:column headerText="Thanh toán(VND)" style="width:50%">
+                                <h:outputText value="#{item.thanhTien}"/>
+                            </p:column>
+                            <p:column headerText="Trạng thái" style="width:30%">
+                                <h:outputText value="#{item.trangThai}"/>
+                            </p:column>
+                        </p:dataTable>
+                    </h:form>
+                </ui:define>
+            </ui:composition>
+        </h:body>
+    </f:view>
+</html>
+

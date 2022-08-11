@@ -19,7 +19,7 @@ public class DAOKhachSan {
             ResultSet rs = stmt.executeQuery("select K.Id as Id, K.Ten as Ten, DiaChi,"
                     + "SoDienThoai, CachTrungTam, K.MoTa, GiapBien, DanhGia, BuaAn, IdThanhPho,"
                     + "T.Ten as TenThanhPho, IdLoaiKhachSan, L.Ten as TenLoaiKhachSan, T.UrlHinhAnh from KhachSan K, ThanhPho T,"
-                    + "LoaiKhachSan L where K.IdThanhPho = T.Id and K.IdLoaiKhachSan = L.Id");
+                    + "LoaiKhachSan L where K.IdThanhPho = T.Id and K.IdLoaiKhachSan = L.Id order by Ten");
             while (rs.next()) {
                 KhachSan tmp = new KhachSan();
                 tmp.setId(rs.getInt("Id"));

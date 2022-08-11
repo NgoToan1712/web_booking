@@ -16,7 +16,7 @@ public class DAOTaiKhoan {
         try {
             con = SQLConnection.getConnection();
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from TaiKhoan");
+            ResultSet rs = stmt.executeQuery("select * from TaiKhoan order by TenTaiKhoan");
             while (rs.next()) {
                 TaiKhoan tmp = new TaiKhoan();
                 tmp.setTenTaiKhoan(rs.getString(1));

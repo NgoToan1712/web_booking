@@ -18,7 +18,7 @@ public class DAOPhong {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select P.Id, P.Ten, P.DienTich, P.GiaThue, P.TienNghi, "
                     + "P.MoTa, P.LoaiGiuong, P.IdKhachSan, K.Ten as TenKhachSan from Phong P, "
-                    + "KhachSan K where P.IdKhachSan=K.Id");
+                    + "KhachSan K where P.IdKhachSan=K.Id order by K.ten");
             while (rs.next()) {
                 Phong tmp = new Phong();
                 tmp.setId(rs.getInt("Id"));
