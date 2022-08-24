@@ -47,7 +47,10 @@ public class DAODatPhong {
         try {
             con = SQLConnection.getConnection();
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("select ThanhPho.Ten as thanhpho,KhachSan.Ten as khachsan,Phong.Ten as phong,TaiKhoan,NgayDat,NgayDen,NgayTra,ThanhTien,DaHuy,TaiKhoan.SoDienThoai from (((DatPhong join Phong on DatPhong.IdPhong=Phong.Id) join KhachSan on Phong.IdKhachSan=KhachSan.Id) join ThanhPho on KhachSan.IdThanhPho=ThanhPho.Id) join TaiKhoan on DatPhong.TaiKhoan=TaiKhoan.TenTaiKhoan");
+            ResultSet rs = stmt.executeQuery("select ThanhPho.Ten as thanhpho,KhachSan.Ten as khachsan,Phong.Ten as phong,"
+                    + "TaiKhoan,NgayDat,NgayDen,NgayTra,ThanhTien,DaHuy,TaiKhoan.SoDienThoai "
+                    + "from (((DatPhong join Phong on DatPhong.IdPhong=Phong.Id) join KhachSan on Phong.IdKhachSan=KhachSan.Id)"
+                    + " join ThanhPho on KhachSan.IdThanhPho=ThanhPho.Id) join TaiKhoan on DatPhong.TaiKhoan=TaiKhoan.TenTaiKhoan");
             while (rs.next()) {
                 LsDatPhong tmp = new LsDatPhong();
                 tmp.setTenThanhPho(rs.getString("thanhpho"));

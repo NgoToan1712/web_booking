@@ -3,10 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/dao/DAOLoaiKhachSan.java</file>
-            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/dao/DAOThanhPho.java</file>
-            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/dao/DAOTaiKhoan.java</file>
-            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/dao/DAOKhachSan.java</file>
+            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/dao/DAODatPhong.java</file>
+            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanKhachSan.java</file>
+            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanDatPhong.java</file>
+            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanLoaiKhachSan.java</file>
+            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanNguoiDung.java</file>
+            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanPhong.java</file>
+            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanTaiKhoan.java</file>
+            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanThanhPho.java</file>
+            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/web/index.xhtml</file>
         </group>
     </open-files>
 </project-private>

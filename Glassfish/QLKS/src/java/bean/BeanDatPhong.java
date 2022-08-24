@@ -4,24 +4,22 @@
  */
 package bean;
 
-import java.util.ArrayList;
+import dao.DAODatPhong;
 import javax.inject.Named;
-import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.SessionScoped;
+import java.io.Serializable;
+import java.util.ArrayList;
 import model.LsDatPhong;
-import dao.*;
 
 /**
  *
  * @author ACER
  */
 @Named(value = "beanDatPhong")
-@ApplicationScoped
-public class BeanDatPhong {
+@SessionScoped
+public class BeanDatPhong implements Serializable {
 
-    /**
-     * Creates a new instance of BeanDatPhong
-     */
-    private ArrayList<LsDatPhong> list =DAODatPhong.getDat();
+    private ArrayList<LsDatPhong> list = DAODatPhong.getDat();
 
     public BeanDatPhong() {
     }
@@ -34,5 +32,4 @@ public class BeanDatPhong {
         this.list = list;
     }
 
-  
 }
