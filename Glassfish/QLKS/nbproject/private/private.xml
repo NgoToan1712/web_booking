@@ -3,15 +3,35 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/dao/DAODatPhong.java</file>
-            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanKhachSan.java</file>
-            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanDatPhong.java</file>
-            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanLoaiKhachSan.java</file>
-            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanNguoiDung.java</file>
-            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanPhong.java</file>
-            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanTaiKhoan.java</file>
-            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/src/java/bean/BeanThanhPho.java</file>
-            <file>file:/F:/New%20folder%20(2)/Java_Hotel_Booking/Glassfish/QLKS/web/index.xhtml</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/dao/DAODatPhong.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/bean/BeanThanhPho.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/web/lienHe.xhtml</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/dao/DAOKhachSan.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/model/ThanhPho.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/bean/BeanKhachSan.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/dao/DAOThanhPho.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/bean/BeanTaiKhoan.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/dao/DAOThanhToan.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/model/DatPhong.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/web/Template/formDatPhong.xhtml</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/dao/DAOTaiKhoan.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/bean/BeanThanhToan.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/bean/BeanNguoiDung.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/web/caNhan.xhtml</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/msg/Message.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/web/Template/footer.xhtml</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/dao/DAOPhong.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/nbproject/build-impl.xml</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/web/Template/header.xhtml</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/model/TaiKhoan.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/bean/BeanNavigation.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/util/VNCharacterUtils.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/dao/SQLConnection.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/model/BuaAn.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/conf/MANIFEST.MF</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/dao/DAOLoaiKhachSan.java</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/web/Template/formDangNhap.xhtml</file>
+            <file>file:/F:/web_booking/Glassfish/QLKS/src/java/model/ThanhToan.java</file>
         </group>
     </open-files>
 </project-private>

@@ -42,6 +42,31 @@ public class DAODatPhong {
         return list;
     }
 
+    public static DatPhong getById(int id) {
+        DatPhong tmp = new DatPhong();
+        try {
+            con = SQLConnection.getConnection();
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("select * from DatPhong where Id= " + id);
+            while (rs.next()) {
+
+                tmp.setId(rs.getInt("Id"));
+                tmp.setTaiKhoan(rs.getString("TaiKhoan"));
+                tmp.setIdPhong(rs.getInt("IdPhong"));
+                tmp.setNgayDat(rs.getDate("NgayDat"));
+                tmp.setNgayDen(rs.getDate("NgayDen"));
+                tmp.setNgayTra(rs.getDate("NgayTra"));
+                tmp.setDichVu(rs.getString("DichVu"));
+                tmp.setGhiChu(rs.getString("GhiChu"));
+                tmp.setThanhTien(rs.getInt("ThanhTien"));
+                tmp.setDaHuy(rs.getBoolean("DaHuy"));
+            }
+            con.close();
+        } catch (Exception e) {
+        }
+        return tmp;
+    }
+
     public static ArrayList<LsDatPhong> getDat() {
         ArrayList<LsDatPhong> list = new ArrayList<>();
         try {
@@ -79,7 +104,7 @@ public class DAODatPhong {
                     } else {
                         trangthai = "Đang đặt";
                     }
-          
+
                 }
                 tmp.setTrangThai(trangthai);
                 tmp.setSoDienThoai(rs.getString("SoDienThoai"));

@@ -58,6 +58,29 @@ public class DAOTaiKhoan {
         }
         return tmp;
     }
+     public static TaiKhoan getTaiKhoan(String TenTaiKhoan) {
+        TaiKhoan tmp = null;
+        try {
+            con = SQLConnection.getConnection();
+            PreparedStatement stmt = con.prepareStatement("select * from TaiKhoan where TenTaiKhoan= ?");
+            stmt.setString(1, TenTaiKhoan);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                tmp = new TaiKhoan();
+                tmp.setTenTaiKhoan(rs.getString(1));
+                tmp.setMatKhau(rs.getString(2));
+                tmp.setHoTen(rs.getString(3));
+                tmp.setGioiTinh(rs.getBoolean(4));
+                tmp.setSoDienThoai(rs.getString(5));
+                tmp.setEmail(rs.getString(6));
+                tmp.setIsAdmin(rs.getBoolean(7));
+            }
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return tmp;
+    }
     
     public static boolean insert(TaiKhoan tmp) {
         try {
